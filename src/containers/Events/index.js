@@ -26,9 +26,9 @@ const EventList = () => {
     }
     return false;
   });
-  const changeType = (evtType) => {
+  const changeType = (value) => {
     setCurrentPage(1);
-    setType(evtType);
+    setType(value);
   };
   const pageNumber = Math.floor((filteredEvents?.length || 0) / PER_PAGE) + 1;
   const typeList = new Set(data?.events.map((event) => event.type));
