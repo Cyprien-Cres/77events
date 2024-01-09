@@ -21,6 +21,8 @@ describe("When Form is created", () => {
         })
       );
       await screen.findByText("En cours");
+      // eslint-disable-next-line no-promise-executor-return
+      await new Promise((r) => setTimeout(r, 1000));
       await screen.findByText("Message envoyé !");
     });
   });
