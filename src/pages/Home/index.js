@@ -14,7 +14,7 @@ import { useData } from "../../contexts/DataContext";
 
 const Page = () => {
   const { data } = useData()
-  const last = data?.events.at(-1)
+  const last = data?.events.at(-1) // fixed scenario 8
   return <>
     <header>
       <Menu />
