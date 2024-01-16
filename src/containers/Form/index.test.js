@@ -22,8 +22,6 @@ describe("When Events is created", () => {
         })
       );
       await screen.findByText("En cours");
-      // eslint-disable-next-line no-promise-executor-return
-      await new Promise((r) => setTimeout(r, 1000)); // fixed scenario 7
       await screen.findByText("Envoyer");
       expect(onSuccess).toHaveBeenCalled();
     });
